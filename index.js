@@ -24,7 +24,7 @@ client.aliases = new discord.Collection();
   require(`./handlers/${handler}`)(client);
 });
 
-client.login(token);
+client.login(process.env.token);
 
 client.on("message", message => {
   if (message.content === "!link discord") {
